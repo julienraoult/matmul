@@ -1,7 +1,7 @@
 # Matrix computation loop with Tensorflow v2 on GPU
 
-* GPU : python matmul.py -s 10000 -i 100 -g 
-* CPU : python matmul.py -s 10000 -i 100  
+* GPU : python matmul.py -s 5000 -i 10 -g 
+* CPU : python matmul.py -s 5000 -i 10  
 
 usage: matmul.py [-h] [-g] -s SHAPE -i STEPS
 
