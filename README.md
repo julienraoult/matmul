@@ -5,7 +5,7 @@
 
 usage: matmul.py [-h] [-g] -s SHAPE -i STEPS
 
-Inspire from :
+Inspired from :
 - https://books.google.fr/books?id=Q0s6Vgb98CQC&lpg=PT212&dq=Python+Cookbook+%22Collecting+a+Bunch+of+Named+Items%22&hl=en&pg=PT213&redir_esc=y#v=onepage&q&f=false
 - https://www.tensorflow.org/guide/eager
 
