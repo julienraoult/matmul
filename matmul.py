@@ -18,7 +18,6 @@ class Struct:
         self.__dict__.update(kwds)
     
 class Matmul:
-
     def __init__(self, gpu, shape, steps):
        
         sMatmul       = Struct(gpu="", shape=(0,0))
@@ -29,7 +28,6 @@ class Matmul:
         self.time     = 0
 
     def compute(self):
-
         # computation
         start = time.time()
 
@@ -55,7 +53,6 @@ class Matmul:
         return end - start;
         
     def process(self):
-
         # run on GPU, if available (tF v2 default option)
         if self.sMatmul.gpu:
             if tf.config.list_physical_devices("GPU"):
@@ -68,7 +65,6 @@ class Matmul:
                 self.time = self.compute()
         
     def stat(self):
-
         # log duration
         if self.sMatmul.gpu:
             printf("Computation duration on GPU: %f\n", self.time)
@@ -76,13 +72,11 @@ class Matmul:
             printf("Computation duration on CPU: %f\n", self.time)
 
 def main(args):
-
     matmul = Matmul(args.gpu, args.shape, args.steps)
     matmul.process()
     matmul.stat()
 
 if __name__ =="__main__":
-
     # arguments parser
     parser = argparse.ArgumentParser()
     parser.add_argument("-g", "--gpu", dest="gpu", help="indicate computation device", action="store_true")
