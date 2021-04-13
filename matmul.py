@@ -19,7 +19,6 @@ class Struct:
     
 class Matmul:
     def __init__(self, gpu, shape, steps):
-       
         sMatmul       = Struct(gpu="", shape=(0,0))
         sMatmul.gpu   = gpu
         sMatmul.shape = (shape, shape)    
